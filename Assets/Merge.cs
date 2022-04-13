@@ -1,0 +1,57 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Merge : MonoBehaviour
+{
+    int ID;
+    public GameObject MergedObject; // у каждого объекта задаетс€ объект после мерджа
+    Transform Block1;
+    Transform Block2;
+    public float Distance;   //  дл€ плавности мерджа,
+    public float MergeSpeed; // элементы аккуратно прит€гиваютс€ друг к другу. работало пока не прикрутила центрирование к гриду
+
+    bool CanMerge;
+    bool MouseReleased;
+
+    private void FixedUpdate() // всегда пытаемс€ померджить
+    {
+        MoveTowards();
+    }
+
+    public void MoveTowards() // возможно нет необходимости в дополнительной функции и ее можно перенести в OnCollisionStay2D?
+    {
+        if (CanMerge)
+        {
+            transform.position = Vector2.MoveTowards(Block1.position, Block2.position, MergeSpeed);
+            Debug.Log($"MERGE TRYIED {gameObject.name}");
+            Debug.Log($"MERGE DONE {gameObject.name}");
+            GameObject O = Instantiate(MergedObject, transform.position, Quaternion.identity) as GameObject;// спавним новый объект
+            Destroy(Block2.gameObject);// уничтожаем те, что
+            Destroy(gameObject);       //    смерджились
+        }
+    }
+
+    private void OnCollisionStay2D(Collision2D collision) // пока один объект касаетс€ другого
+    {
+        if (MouseReleased) // если мышь отпустили
+        {
+            if (collision.gameObject.CompareTag("MergeBlock")) // если объект касаетс€ объекта, который может смерджитьс€
+            {
+                if (collision.gameObject.GetComponent<SpriteRenderer>().color == GetComponent<SpriteRenderer>().color) // если они одного цвета (одинаковые)
+                {
+                    Block1 = transform;
+                    Block2 = collision.transform;
+                    CanMerge = true;                         
+                }
+            }
+            MouseReleased = false; // как только проверили, можно ли померджить, мышь снова в позиции "не отпустили"
+        }
+    }
+
+    void OnMouseUp()
+    {
+        Debug.Log($"MouseUp");
+        MouseReleased = true;
+    }
+}
