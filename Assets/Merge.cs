@@ -38,7 +38,7 @@ public class Merge : MonoBehaviour
         {
             if (collision.gameObject.CompareTag("MergeBlock")) // если объект касается объекта, который может смерджиться
             {
-                if (collision.gameObject.GetComponent<SpriteRenderer>().color == GetComponent<SpriteRenderer>().color) // если они одного цвета (одинаковые)
+                if (collision.gameObject.GetComponent<SpriteRenderer>().sprite == GetComponent<SpriteRenderer>().sprite)
                 {
                     Block1 = transform;
                     Block2 = collision.transform;

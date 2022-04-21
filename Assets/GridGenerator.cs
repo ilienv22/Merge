@@ -5,9 +5,9 @@ using UnityEngine;
 public class GridGenerator : MonoBehaviour
 {
     [SerializeField] GameObject tile;
-    [SerializeField] int gridHeight = 10;
-    [SerializeField] int gridWight = 10;
-    [SerializeField] float tileSize = 1f;
+    [SerializeField] int gridHeight = 4;
+    [SerializeField] int gridWight = 4;
+    [SerializeField] float tileSize = 2f;
 
     // Start is called before the first frame update
     void Start()
@@ -27,8 +27,8 @@ public class GridGenerator : MonoBehaviour
             for (int x = 0; x < gridWight; x++)
             {
                 GameObject newTile = Instantiate(tile, transform);
-                float posX = 2.34f + (i * tileSize + x * tileSize) / 2f; // 2.34f, -0.18f - подобранные мною значения, чтобы этот грид
-                float posY = -0.18f + (i * tileSize - x * tileSize) / 4f; //                и графический совпадали в пространстве
+                float posX = -14.3f + (i * tileSize + x * tileSize) / 2f; // 2.34f, -0.18f - подобранные мною значения, чтобы этот грид
+                float posY = -3.5f + (i * tileSize - x * tileSize) / 3.4f; //                и графический совпадали в пространстве
 
                 newTile.transform.position = new Vector2(posX, posY);
                 newTile.name = i + ", " + x;
