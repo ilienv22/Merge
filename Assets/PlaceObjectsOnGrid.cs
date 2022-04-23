@@ -25,13 +25,32 @@ public class PlaceObjectsOnGrid : MonoBehaviour
             Debug.Log($"OnTrigger");
             if (collider.gameObject.CompareTag("Grid")) // если элемент касается именно грида
             {
-                Debug.Log($"PLACE {gameObject.name} ON GRID");
-                Block1 = transform;
-                Block2 = collider.transform;
-                transform.position = Vector2.MoveTowards(Block1.position, Block2.position, speed); // Элемент двигаем на позицию грида
+                if ((collider.gameObject.GetComponent<GridData>().isAvaliable)&& collider.gameObject.GetComponent<GridData>().isEmpty)
+                {
+                    gameObject.GetComponent<MergeObjectData>().currentPosition = collider.gameObject;
+                    Debug.Log($"PLACE {gameObject.name} ON GRID");
+                    Block1 = transform;
+                    Block2 = collider.transform;
+                    transform.position = Vector2.MoveTowards(Block1.position, Block2.position, speed);
+                    collider.gameObject.GetComponent<GridData>().isEmpty = false;
+                }
+                else
+                {
+                    Debug.Log($"OffGrid");
+                    transform.position = Vector2.MoveTowards(transform.position, gameObject.GetComponent<MergeObjectData>().currentPosition.transform.position, speed);
+                }
             }
         }
     }
+    private void OnTriggerExit2D(Collider2D collider) // Пока один элемент касается другого
+    {
+        if (collider.gameObject.CompareTag("Grid")) // если элемент касается именно грида
+        {
+            collider.gameObject.GetComponent<GridData>().isEmpty = true;
+        }
+    }
+
+
     void OnMouseDown() // логируем в каком состоянии мышь  - если мышь нажата, центрирование не нужно.
     {
         Debug.Log($"MouseUp");

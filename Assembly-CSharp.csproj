@@ -58,8 +58,10 @@
   <ItemGroup>
     <Compile Include="Assets\Merge.cs" />
     <Compile Include="Assets\MouseRotate.cs" />
-    <Compile Include="Assets\GridGenerator.cs" />
     <Compile Include="Assets\PlaceObjectsOnGrid.cs" />
+    <Compile Include="Assets\GridGenerator.cs" />
+    <Compile Include="Assets\GridData.cs" />
+    <Compile Include="Assets\MergeObjectData.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

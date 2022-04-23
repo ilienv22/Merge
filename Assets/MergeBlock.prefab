@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -4335214721028082249}
   - component: {fileID: -3378025857740282743}
   - component: {fileID: 887697581006879163}
+  - component: {fileID: 6183387928117295924}
   m_Layer: 0
   m_Name: MergeBlock
   m_TagString: MergeBlock
@@ -164,7 +165,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.88, y: 4.1}
+    oldSize: {x: 5.88, y: 4.1114063}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -241,3 +242,16 @@ PolygonCollider2D:
       - {x: 1.52, y: -2.04}
       - {x: 1.68, y: -1.9399999}
       - {x: 1.9499999, y: -1.77}
+--- !u!114 &6183387928117295924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4820220800279228611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5151103c169f864e8d4cd7636146580, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentPosition: {fileID: 0}
