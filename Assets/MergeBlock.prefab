@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -4335214721028082249}
   - component: {fileID: -3378025857740282743}
   - component: {fileID: 887697581006879163}
-  - component: {fileID: 6183387928117295924}
+  - component: {fileID: 1001001081347212826}
   m_Layer: 0
   m_Name: MergeBlock
   m_TagString: MergeBlock
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2011503709
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: c5b86d348a1f7c64eab2875c530d0b6b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -242,7 +242,7 @@ PolygonCollider2D:
       - {x: 1.52, y: -2.04}
       - {x: 1.68, y: -1.9399999}
       - {x: 1.9499999, y: -1.77}
---- !u!114 &6183387928117295924
+--- !u!114 &1001001081347212826
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -251,7 +251,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 4820220800279228611}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5151103c169f864e8d4cd7636146580, type: 3}
+  m_Script: {fileID: 11500000, guid: f75d481a95f0e4b41a7c157c61c97731, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  size: 1
   currentPosition: {fileID: 0}

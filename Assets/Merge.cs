@@ -24,9 +24,10 @@ public class Merge : MonoBehaviour
         if (CanMerge)
         {
             transform.position = Vector2.MoveTowards(Block1.position, Block2.position, MergeSpeed);
-            Debug.Log($"MERGE TRYIED {gameObject.name}");
-            Debug.Log($"MERGE DONE {gameObject.name}");
             GameObject O = Instantiate(MergedObject, transform.position, Quaternion.identity) as GameObject;// спавним новый объект
+            O.GetComponent<ObjectData>().currentPosition = Block1.gameObject.GetComponent<ObjectData>().currentPosition;
+            gameObject.GetComponent<ObjectData>().currentPosition.GetComponent<GridData>().isEmpty = true;
+            Block2.gameObject.GetComponent<ObjectData>().currentPosition.GetComponent<GridData>().isEmpty = true;
             Destroy(Block2.gameObject);// уничтожаем те, что
             Destroy(gameObject);       //    смерджились
         }
@@ -51,7 +52,6 @@ public class Merge : MonoBehaviour
 
     void OnMouseUp()
     {
-        Debug.Log($"MouseUp");
         MouseReleased = true;
     }
 }

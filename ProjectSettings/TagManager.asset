@@ -7,6 +7,7 @@ TagManager:
   - MergeBlock
   - Grid
   - GraphicsGrid
+  - Building
   layers:
   - Default
   - TransparentFX
@@ -43,6 +44,9 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Building
+    uniqueID: 1947722289
     locked: 0
   - name: Tiles
     uniqueID: 2283463587

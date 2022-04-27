@@ -11,14 +11,12 @@ public class MouseRotate : MonoBehaviour
 
     void OnMouseDown()
     {
-        Debug.Log($"MouseDown");
         pointScreen = Camera.main.WorldToScreenPoint(gameObject.transform.position); // ищем над чем нажали мышь
         offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector2(Input.mousePosition.x, Input.mousePosition.y)); // двигаем то, что нашли под курсором
     }
 
     void OnMouseDrag()
     {
-        Debug.Log($"MouseMoving...");
         Vector2 curScreenPoint = new Vector2(Input.mousePosition.x, Input.mousePosition.y);// мен€ем позицию объекта за движением мыши
         Vector2 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint); 
         transform.position = curPosition;
