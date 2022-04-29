@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5736388179766032468}
   - component: {fileID: 7503714607957255690}
-  - component: {fileID: 8135376754550430754}
+  - component: {fileID: 6689766808287367745}
   m_Layer: 2
   m_Name: Circle
   m_TagString: Grid
@@ -26,8 +26,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7734904523395468756}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.31, y: -0.16, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -46,8 +46,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isAvaliable: 0
   isEmpty: 1
---- !u!68 &8135376754550430754
-EdgeCollider2D:
+--- !u!58 &6689766808287367745
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -59,15 +59,6 @@ EdgeCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: 0.16476727, y: -6.5850334}
-  - {x: 9.455233, y: 0.159464}
-  - {x: -0.11715245, y: 6.2111993}
-  - {x: -9.584765, y: -0.1079973}
-  - {x: 0.099610806, y: -6.594133}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
+  m_Offset: {x: 0.011834621, y: 0.5798886}
+  serializedVersion: 2
+  m_Radius: 3.647967

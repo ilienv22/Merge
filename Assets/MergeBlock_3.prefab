@@ -555,6 +555,10 @@ PrefabInstance:
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[66].y
       value: -1.9399999
       objectReference: {fileID: 0}
+    - target: {fileID: 5892091097979610506, guid: 2684d3cc7d2dbfe4a934121697f094fc, type: 3}
+      propertyPath: MergedObject
+      value: 
+      objectReference: {fileID: 4820220800279228611, guid: ea06177b7bc0b804a9cae5234c26a926, type: 3}
     - target: {fileID: 6557474755073380113, guid: 2684d3cc7d2dbfe4a934121697f094fc, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.x
       value: 5.16

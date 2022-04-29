@@ -30,7 +30,7 @@ public class GridGenerator : MonoBehaviour
             {
                 GameObject newTile = Instantiate(tile, transform);
                 float posX = -21.9f + (i * tileSize + x * tileSize) / 2f; 
-                float posY =  14f + (i * tileSize - x * tileSize) / 3.4f; 
+                float posY =  12.9f + (i * tileSize - x * tileSize) / 3.4f; 
                 newTile.transform.position = new Vector2(posX, posY);
                 Vector3Int pos = new Vector3Int(i, x, 0);
                 newTile.name = i + ", " + x;

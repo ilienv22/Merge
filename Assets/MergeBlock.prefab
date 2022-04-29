@@ -10,12 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 4820220800279228671}
   - component: {fileID: 4820220800279228670}
-  - component: {fileID: 4820220800279228668}
   - component: {fileID: 2601317825282612045}
   - component: {fileID: -4335214721028082249}
-  - component: {fileID: -3378025857740282743}
   - component: {fileID: 887697581006879163}
   - component: {fileID: 1001001081347212826}
+  - component: {fileID: -6812127024365521121}
+  - component: {fileID: 5197400734168701530}
   m_Layer: 0
   m_Name: MergeBlock
   m_TagString: MergeBlock
@@ -88,21 +88,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4820220800279228668
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4820220800279228611}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46c248d3a3b68c240b848a1bbbed5193, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MergedObject: {fileID: 6557474755073380115, guid: 2684d3cc7d2dbfe4a934121697f094fc, type: 3}
-  Distance: 0.05
-  MergeSpeed: 0.09
 --- !u!114 &2601317825282612045
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,18 +121,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
---- !u!114 &-3378025857740282743
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4820220800279228611}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b13b90856ef5a9428a9d318a4ea4f2b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!60 &887697581006879163
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -254,5 +227,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f75d481a95f0e4b41a7c157c61c97731, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  size: 1
+  IsOnPlace: 1
   currentPosition: {fileID: 0}
+--- !u!114 &-6812127024365521121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4820220800279228611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb13be42ae71493409e512fe8caac7fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  MouseUp: 1
+  Block1: {fileID: 0}
+  Block2: {fileID: 0}
+  gridSize: 2
+--- !u!114 &5197400734168701530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4820220800279228611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46c248d3a3b68c240b848a1bbbed5193, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MergedObject: {fileID: 6557474755073380115, guid: 2684d3cc7d2dbfe4a934121697f094fc, type: 3}
+  Distance: 0.05
+  MergeSpeed: 20

@@ -62,6 +62,7 @@
     <Compile Include="Assets\PlaceObjectsOnGrid.cs" />
     <Compile Include="Assets\GridGenerator.cs" />
     <Compile Include="Assets\GridData.cs" />
+    <Compile Include="Assets\PlaceObjectsOnGridByCoordinates.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
