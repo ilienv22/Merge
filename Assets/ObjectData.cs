@@ -6,4 +6,5 @@ public class ObjectData : MonoBehaviour
 {
     public bool IsOnPlace = true;
     public GameObject currentPosition;
+    public bool IsBlocked = false;
 }
